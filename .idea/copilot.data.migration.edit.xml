@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EditMigrationStateService">
+    <option name="pendingTurns">
+      <map>
+        <entry key="f3107cb0-a5e0-4f9e-a3fb-381dc680a46c">
+          <value>
+            <set>
+              <option value="8fae558f-6337-4ce7-8271-8bcae3c352a0" />
+              <option value="95ac1c23-cdb5-450b-bf4a-9ea029380460" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <pendingWorkingSetItems>
+      <entry key="f3107cb0-a5e0-4f9e-a3fb-381dc680a46c">
+        <set>
+          <option value="file://$PROJECT_DIR$/.github/workflows/jekyll.yml" />
+          <option value="file://$PROJECT_DIR$/rtonic-theme.gemspec" />
+          <option value="file://$PROJECT_DIR$/.github/workflows/pages.yml" />
+        </set>
+      </entry>
+    </pendingWorkingSetItems>
+  </component>
+</project>

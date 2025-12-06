@@ -32,4 +32,3 @@ Gem::Specification.new do |s|
     "jekyll_theme"    => "true"
   }
 end
-

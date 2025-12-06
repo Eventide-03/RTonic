@@ -1,0 +1,58 @@
+name: CI — Jekyll & Gem build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [2.7, 3.0, 3.1]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler --conservative
+          bundle install --jobs 4 --retry 3
+
+      - name: Build gem
+        run: |
+          if [ -f ./rtonic-theme.gemspec ]; then
+            gem build rtonic-theme.gemspec
+          else
+            echo "gemspec not found, skipping gem build"
+          fi
+
+      - name: Build Jekyll site
+        run: |
+          if bundle exec jekyll -v >/dev/null 2>&1; then
+            bundle exec jekyll build --trace
+          else
+            echo "Jekyll not found in bundle, skipping site build"
+          fi
+
+      - name: Upload built gem artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rtonic-theme-gem-${{ matrix.ruby }}
+          path: |
+            *.gem
+            vendor/cache/*.gem
+
+      - name: Upload _site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ matrix.ruby }}
+          path: _site
