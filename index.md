@@ -7,6 +7,5 @@ layout: default
 
 *As he floated in staunch defiance of heaven's fire, he knew no one had flown higher.*
 <br>
-welcome all and dismiss none
+Evil theme muahahaha >:)
 <br>
-this is a safe space where we learn

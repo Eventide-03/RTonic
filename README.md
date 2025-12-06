@@ -1,10 +1,41 @@
-# Tonic Starter
+# RTonic
 
-A sample [Jekyll](https://jekyllrb.com) theme designed to be a starting point for all [Tonic](https://github.com/hackclub/tonic) submissions.
+Icarus is a simplistic Jekyll theme built for Tonic, a Hack Club program focused on learning Jekyll :)
 
-This template is intentionally left incomplete; users should play through Tonic to learn how to make a full-featured theme.
+Features
+- Responsive homepage and post layouts
+- Built in SCSS
+- Config-driven options (site title, description, author, theme color)
+- Support for Jekyll collections and tags
 
-# Usage
-1. At the top of this page, select **Use this template** &gt; **Create a new repository** to clone the template to your account.
-2. Create a codespace from the created repository (for beginners) or use `git clone` (for advanced users) to start pushing commits.
-3. Run `gem install jekyll`, then `jekyll serve` to see the template in action.
+Installation
+Clone and run locally (for development)
+1. Clone this repo:
+   git clone https://github.com/YOUR-USERNAME/RTonic.git my-site
+2. Change into the site directory:
+   cd my-site
+3. Install dependencies and serve:
+   bundle install
+   bundle exec jekyll serve
+4. Open the link shown in terminall with your browser.
+
+Configuration
+In _config.yml set your site metadata and options:
+title: "My Site"
+Description: "A short description of my site"
+Author: "Your Name"
+Theme_color: "teal"
+Show_search: true
+
+Creating content
+- Posts: add markdown files under _posts with YAML front matter (title, date, tags).
+- Pages: create .md files in the root (e.g., about.md) with layout: page.
+- Collections: define collections in _config.yml and add content to _<collection>/.
+
+Contributing
+Found a bug or want a feature? Open an issue or submit a pull request with a short description and an example.
+
+Learn more about Tonic
+This theme was built as part of Tonic. Learn about the event at: https://tonic.hackclub.com
+
+built with :heart: for tonic, a hackclub event for learning jekyll!
